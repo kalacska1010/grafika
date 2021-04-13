@@ -8,6 +8,7 @@ package grafika;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -58,8 +59,6 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("jLabel1");
-
         jMenu3.setText("Menü");
 
         jMenuItem1.setText("Beolvasás");
@@ -107,7 +106,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addComponent(jCheckBox1))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
@@ -133,7 +132,17 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-      
+        try {
+               List<String> sorok = Files.readAllLines(Paths.get("fajl.txt"));
+               
+                
+             
+                
+            } catch (IOException ex) {
+                Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
+               
+            }
+       
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
